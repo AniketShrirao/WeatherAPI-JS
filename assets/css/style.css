@@ -106,11 +106,24 @@ li {
 /*=================================
   Header styling starts here
 =================================*/
+header {
+  margin: 26px 3.2%;
+  padding: 25px;
+  background-color: #000;
+}
 
+header .wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
 
-
-
-
+header p {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
 
 /*=================================
   Header styling ends here
@@ -179,25 +192,3 @@ input[type="submit"]{
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
