@@ -119,12 +119,22 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+form {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-
-
-
-
-
+.display {
+  padding: 20px;
+  width: 50%;
+  background: #f8f8f8;
+  font-family: cursive;
+  margin: 50px auto;
+  border-radius: 2px;
+  text-align: left;
+}
 
 
 /*=================================
