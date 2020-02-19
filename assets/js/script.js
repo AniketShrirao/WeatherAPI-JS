@@ -88,7 +88,7 @@ function changeBgColor(weatherstatus) {
   };
 // Changing the background image of [main .wrapper] element
   var urlbgcolor = weatherType+".jpg";
-  changingBackground.style.background = 'url(assets/images/'+urlbgcolor+') no-repeat';
+  changingBackground.style.background = 'url("assets/images/'+urlbgcolor+'") no-repeat';
   changingBackground.style.backgroundSize = 'cover';
   changingBackground.style.backgroundPosition = 'center'; 
 }
