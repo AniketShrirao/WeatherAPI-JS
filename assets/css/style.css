@@ -142,7 +142,6 @@ form {
 .display {
   padding: 20px;
   width: 50%;
-  background: #f8f8f8;
   font-family: cursive;
   margin: 50px auto;
   border-radius: 2px;
@@ -181,11 +180,18 @@ input[type="submit"]{
 }
 
 .display h1{
-  padding: 20px 7%;
+  margin: 0 7%;
+  padding: 20px 7% 20px 2%;
   font-size: 28px;
+  background: #f8f8f8;
+  width: 28%;
 }
 
-.display p{  margin: 20px 7%;}
+.display p {  
+  margin: 20px 7%;
+  background: #f8f8f8;
+}
+
 .temp {color: red;}
 .cloud {color: royalblue;}
 .desc {color: darkmagenta;}
