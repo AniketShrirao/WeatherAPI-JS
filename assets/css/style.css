@@ -178,6 +178,11 @@ input[type="submit"]{
   padding: 20px 7% 20px 2%;
   font-size: 28px;
   background: #f8f8f8;
+  display: flex;
+}
+
+.display a:first-of-type {
+  margin-top: 20px;
 }
 
 .display p { 
