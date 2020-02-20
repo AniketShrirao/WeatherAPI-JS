@@ -46,21 +46,32 @@ debugger
 // validate before display 
   if(display.innerHTML === "" ||   currentLocation !== name) {
     clear();
+// Storing Retrieved data into variables
+var iconUnicode = dataRecieved.weather[0].icon;
+var weatherstatus = dataRecieved.weather[0]['description'];
+var tempValue = dataRecieved['main']['temp'];
+var windSpeedval = dataRecieved['wind']['speed'];
+var iconUrl = "http://openweathermap.org/img/wn/"+iconUnicode+"@2x.png";
+
 // Creating Element-Childs of .display class element
   var weatherhead = document.createElement('h1');
   var descriptionTitle = document.createElement('p');
   var temperatureValue = document.createElement('p');
   var windSpeed = document.createElement('p');
+  var weatherStatusNow =document.createElement('a');
   var weatherIcon =document.createElement('a');
-
+  var weatherIconImg =document.createElement('img');
 // setting class to all created elements
-  weatherIcon.setAttribute('class','current-weather');
+  weatherStatusNow.setAttribute('class','current-weather');
+  weatherIconImg.setAttribute('src',iconUrl);
   descriptionTitle.setAttribute('class','desc');
   temperatureValue.setAttribute('class','temp');
   windSpeed.setAttribute('class','cloud');
 
 // appending Element-Childs to .display class element
+  weatherhead.appendChild(weatherStatusNow);
   weatherhead.appendChild(weatherIcon);
+  weatherIcon.appendChild(weatherIconImg);
   display.appendChild(weatherhead);
   display.appendChild(descriptionTitle);
   display.appendChild(temperatureValue);
@@ -72,18 +83,11 @@ debugger
   var windSpeedValue =  document.querySelector('.cloud');
   var currentWeather = document.querySelector('.current-weather');
 
-// Storing Retrieved data into variables
-  var iconUnicode = dataRecieved.weather[0].icon;
-  var weatherstatus = dataRecieved.weather[0]['description'];
-  var tempValue = dataRecieved['main']['temp'];
-  var windSpeedval = dataRecieved['wind']['speed'];
-
 // displaying retrieved data to innerText of elements 
   desc.innerText = "city location: "+cityName;
   temperatureValue.innerText = "temperature Value: "+tempValue+"\xB0 C";
   windSpeedValue.innerText = "Wind speed: "+windSpeedval+"km/hr";
   currentWeather.innerText = weatherstatus;
-  iconUnicode = "\\"+iconUnicode;
 
 // checking if it is a previous entered location or not
   var previousLocation = desc.innerText;
@@ -126,7 +130,6 @@ function changeBgColor(weatherstatus) {
   // changingBackground.setAttribute('backgroundPosition','center');
   changingBackground.style.background = backgroundUrl;
   changingBackground.style.backgroundSize = 'cover';
-  changingBackground.style.backgroundPosition = 'center'; 
 }
 
 // clear the display field 
